@@ -1,15 +1,22 @@
+$( document ).ready(function() {
+
     var wins = 0;
-    var loses = 0;
-    var score = 0;
+    var losses = 0;
+    var totalGames = 0;
+    var gemTotal = 0;
     
+
     //Set a computer guess
-    var targetNumber = parseInt(Math.floor(Math.random() * 120) + 19);
+    var targetNumber = Math.floor((Math.random()*120)+19);
+
+    //show Target Number in HTML
+    $("#target-number").text(targetNumber);
 
     // set a number value for each crystal
-    valueGem1 = parseInt(Math.random() * 12) + 1; 
-    valueGem2 = parseInt(Math.random() * 12) + 1;
-    valueGem3 = parseInt(Math.random() * 12) + 1;
-    valueGem4 = parseInt(Math.random() * 12) + 1;
+    var valueGem1 = Math.floor((Math.random()*12)+1);
+    var valueGem2 = Math.floor((Math.random()*12)+1);
+    var valueGem3 = Math.floor((Math.random()*12)+1);
+    var valueGem4 = Math.floor((Math.random()*12)+1);
     
     //confirm working values for computer guess and gem
     console.log("the target number is " + targetNumber)
@@ -18,17 +25,74 @@
     console.log("gem 3 is worth " + valueGem3)
     console.log("gem 4 is worth " + valueGem4)
 
-    //Need an if/else statement that will make sure crystals can't share the same number
-
-
-
     // create click event for each crystal
+    $("#gem-1").on("click", function() {
+        gemTotal = gemTotal + valueGem1;
+        $("#gem-total").text(gemTotal);
+        if (targetNumber === gemTotal) {
+            wins++
+            $("#wins").text("Wins:" + wins);
+            totalGames++
+            $("#total-games").text("Total Games:" + totalGames);
+        } else if (targetNumber < gemTotal) {
+            losses++
+            $("#losses").text("Losses: " + losses);
+            totalGames++
+            $("#total-games").text("Total Games:" + totalGames);
+        }
+    });
 
-    // create function that will add the value of crystals
+    $("#gem-2").on("click", function() {
+        gemTotal = gemTotal + valueGem2;
+        $("#gem-total").text(gemTotal);
+        if (targetNumber === gemTotal) {
+            wins++
+            $("#wins").text("Wins:" + wins)
+            totalGames++
+            $("#total-games").text("Total Games:" + totalGames);
+        } else if (targetNumber < gemTotal) {
+            losses++
+            $("#losses").text("Losses:" + losses);
+            totalGames++
+            $("#total-games").text("Total Games:" + totalGames);
+        }
+    });
 
-    //if/else statement if current player value equals target number, you win.
-                // would love to create a win screen with animation like fireworks
-                //have to have the game reset and record the win
+    $("#gem-3").on("click", function() {
+        gemTotal = gemTotal + valueGem3;
+        $("#gem-total").text(gemTotal);
+        if (targetNumber === gemTotal) {
+            wins++
+            $("#wins").text("Wins:" + wins);
+            totalGames++
+            $("#total-games").text("Total Games:" + totalGames);
+        } else if (targetNumber < gemTotal) {
+            losses++
+            $("#losses").text("Losses:" + losses);
+            totalGames++
+            $("#total-games").text("Total Games:" + totalGames);
+        }
+    });
+
+    $("#gem-4").on("click", function() {
+        gemTotal = gemTotal + valueGem4;
+        $("#gem-total").text(gemTotal);
+        if (targetNumber === gemTotal) {
+            wins++
+            $("#wins").text("Wins:" + wins);
+            totalGames++
+            $("#total-games").text("Total Games:" + totalGames);
+        } else if (targetNumber < gemTotal) {
+            losses++
+            $("#losses").text("Losses:" + losses);
+            totalGames++
+            $("#total-games").text("Total Games:" + totalGames);
+        }
+    });
+
+    
+    //have to have the game reset and record the win
     // if the number goes over you lose.
                 //have to reset the game and record the loss.
-           
+                
+});

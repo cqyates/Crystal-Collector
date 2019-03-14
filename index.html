@@ -1,14 +1,25 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
+    <!-- Required meta tags-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!------Jquery Link-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!------Better Fonts!-->
     <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet"> 
+
+    <!---- Links to My Css ---->
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!------ Links to my Javascript-->
     <script type="text/javascript" src="assets/javascript/game.js"></script>
    
 
@@ -23,14 +34,21 @@
         </div>
         <br>
         <div class="row row2">
-            <div class="col-md-12"> <h3>Click on the Crystals to Equal the Value of the Target Number</h3> </div>
+            <div class="col-md-12"> <h6> Click Crystals to Increase Gem Total </h6> </div>
         </div>
         <br>
         <div class="row row3">
-            <div class="col-md-4"></div>
-            <div class="card">Target Number
-                <h6 id="target-number"></h6>
-            </div>
+                <div class="card" id="rules"> <h6> Rules</h6>
+                       <p> Click on the crystals to add to your total score. If you can reach the target number you win, but be careful! If you go over the number, you will lose. The value of the crystals changes at the start of each game </p>
+                     </div>
+            <div class="card" id="target"> <h6>Target Number</h6>
+                <h5 id="target-number"></h5>
+             </div>
+             <div class="card" id="score-card"> <h6>Score Card</h6>
+                    <h5 id="total-games"> Total Games </h5>
+                    <h5 id="wins"> Wins </h5>
+                    <h5 id="losses"> Losses </h5>
+                </div>
         </div>
         <br>
         <div class="row row4">
@@ -48,15 +66,19 @@
                 <img src="assets/images/gem-4-revised.png" id="gem-4"> 
             </div>
             <div class="col-md-2"></div>
+<br>
+            <div class="row row3">
+                <div class="col-md-4"></div>
+                <div class="card" id="your-score"> <h6> Gem Total</h6>
+                    <h5 id="gem-total"></h5>
+                </div>
+                <div class="col-md-2"></div>
+                <div class="col-md-4"></div>
+            </div>
 
         </div>
     </div>
 
-    
-    
-    
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
     
   </body>
 </html>
