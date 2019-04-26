@@ -11,8 +11,9 @@ body {
 h1 {
     text-align: center;
     font-family: 'Luckiest Guy', cursive;
-    color: lightgoldenrodyellow;
-    font-size: 50pt;
+    color: rgba(196, 96, 162, 0.988);
+    font-size: 70pt;
+    text-shadow: 5px 5px 5px rgb(60, 58, 58);
 }
 .card {
     width: 250;
@@ -20,6 +21,7 @@ h1 {
     padding: 1rem;
     margin: 1rem;
     text-align: left;
+    box-shadow: 7px 8px 5px rgb(60, 58, 58);
 }
 h6 {
     font-family: 'Luckiest Guy', cursive;
@@ -33,6 +35,14 @@ h6 {
 
 #rules {
     width: 30%;
-    text-align: left
+    text-align: left;
+    box-shadow: 7px 8px 5px rgb(60, 58, 58);
 }
-
+.container {
+    display: inline-block;
+    margin: 40px;
+}
+img {
+   text-shadow: 5px 5px 5px rgb(60, 58, 58);
+   width: 150px;
+}
